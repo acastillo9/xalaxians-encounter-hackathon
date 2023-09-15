@@ -1,3 +1,5 @@
+![Xalaxians Encounter Hackathon Banner](https://github.com/acastillo9/xalaxians-encounter-hackathon/assets/12093565/59f31b79-dc27-46ae-9158-adbe29c09964)
+
 # Xalaxians Encounter Hackathon
 
 This is a basic Node.js application that's designed to generate datasets as a support for the Xalaxians Encounter Hackathon challenge.
