@@ -30,13 +30,13 @@ async function writeFile(filePath, fileContent, fileType, filename) {
   switch(fileType) {
     case 'docx':
       const fileContentInTemplateDocx = await templateWrite(
-          './templates/format.docx', {title: filename, content: fileContent}
+          './src/templates/format.docx', {title: filename, content: fileContent}
       );
       await fs.writeFile(filePath, fileContentInTemplateDocx);
       break;
     case 'xlsx':
       const fileContentInTemplateXlsx = await templateWrite(
-          './templates/format.xlsx', {title: filename, content: fileContent.split('\n')}
+          './src/templates/format.xlsx', {title: filename, content: fileContent.split('\n')}
       );
       await fs.writeFile(filePath, fileContentInTemplateXlsx);
       break;
