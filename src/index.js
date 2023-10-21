@@ -47,6 +47,8 @@ function handleMenuSelection(selection) {
         console.log('Dataset Files type')
         console.log('1. txt');
         console.log('2. pdf');
+        console.log('3. docx');
+        console.log('4. xlsx');
         rl.question(`Please select an option (${DEFAULT_DATASET_FILES_TYPE}): `, (filesType) => {
           const showSpinnerId = showSpinner(LOADING_MESSAGE);
           datasetFileGenerator(filename || DEFAULT_DATASET_INDEX_FILENAME, getExtension(filesType)).then(() => {
@@ -72,6 +74,10 @@ function promptForMenu() {
 
 function getExtension(selection) {
   switch(selection) {
+    case '4':
+      return 'xlsx';
+    case '3':
+      return 'docx';
     case '2':
       return 'pdf';
     case '1':
